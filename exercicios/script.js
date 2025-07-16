@@ -133,4 +133,55 @@ function verificarAprovacao(){
 
 }
 
+function converterGrausCelsius(){
+
+    let graus = parseFloat(document.getElementById("graus").value);
+
+    let fahrenheit =  (graus * 9/5) + 32;
+
+    document.getElementById("fahrenheit").innerText = "Em fahrenheit: " + fahrenheit.toFixed(1);
+
+
+}
+
+function verificarDiaSemana(){
+
+    let diasSemana = ['domingo', 'segunda', 'quarta', 'quinta', 'quinta', 'sabado'];
+
+    let dia = Number(document.getElementById("dia").value);
+    
+    document.getElementById("diaSemana").innerText = "O dia escolhido é: " + diasSemana[dia - 1];
+
+
+}
+
+function verificarSenha(){
+
+    let senha = Number(document.getElementById("senha").value);
+
+    if(senha == 1234){
+        document.getElementById("acesso").innerText = "Acesso permitido";
+
+    }
+
+    else{
+        document.getElementById("acesso").innerText = "Senha incorreta";
+    }
+
+}
+
+
+function imprimirContagemRegressiva(){
+
+    let contagem = "";
+
+    for(let i = 10;i > 0;i--){
+
+       contagem += i + "\n";
+
+    } 
+    
+    document.getElementById("contagemRegressiva").innerText = contagem;
+
+}
 
